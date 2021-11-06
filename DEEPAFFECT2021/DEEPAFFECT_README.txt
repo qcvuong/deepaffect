@@ -28,6 +28,7 @@ _train_VALIDATIONdata.csv		: CSV file containing validation dat
 					  For filename, don't include extension
 
 <full_imgs_train>
+	* create a directory with this name
 	* Put all training/validation images here (currently set for .jpg images)
 
 
@@ -74,10 +75,12 @@ _test_data.csv				: CSV containing test data
 					  For filename, don't include extension
 
 <full_imgs_test>
+	* create a directory with this name
 	* Put all test images here (currently set for .jpg images)
 
 
 <aaPredictions>
+	* create a directory with this name
 	* Output of predictions stored in this folder
 	PREDICTIONS.csv: predicted valence and arousal (separated by ----) the first set of predictions (rows) are for valence, then separator (----), then arousal
 	AROUSAL.csv: human rated arousal score (copied from _test_data.csv)
