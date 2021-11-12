@@ -37,7 +37,7 @@ _train_VALIDATIONdata.csv		: CSV file containing validation dat
 
 
 <full_imgs_train>
-	* need to create this folder (with this filename)
+	* need to create this folder (with this filename) in the <source> folder
 	* Put all training/validation images here (currently set for .jpg images)
 
 
@@ -46,7 +46,7 @@ COMMAND LINE:
 python _train_FinalProccessingKFoldREG.py --model myModel.h5 --structure myModelStructure.png --Logger myModelResults.csv --EarlyStop myModel_earlystop.h5 --plot myModelPlot.png
 
 
-OUTPUTS:
+OUTPUTS in the main folder <source>:
 
 myModel.h5				: trained model
 
@@ -78,12 +78,12 @@ _test_data.csv				: CSV containing test data
 
 
 <full_imgs_test>
-	* need to create this folder (with this filename)
+	* need to create this folder (with this filename) in the <source> folder
 	* Put all test images here (currently set for .jpg images)
 
 
 <aaPredictions>
-	* need to create this folder (with this filename)
+	* need to create this folder (with this filename) in the <source> folder
 	* Output of predictions stored in this folder
 	PREDICTIONS.csv: predicted valence and arousal (separated by ----) the first set of predictions (rows) are for valence, then separator (----), then arousal
 	AROUSAL.csv: human rated arousal score (copied from _test_data.csv)
@@ -92,11 +92,13 @@ _test_data.csv				: CSV containing test data
 
 
 After training, the trained model (myModel.h5) can be used to predict arousal/valence of new images
-OR else use any desired previously trained model
+OR else use any desired previously trained model (a.h5 file)
 
 
 COMMAND LINE:
 python _test_Prediction.py --model myModel.h5
+
+* make sure that the model is in the <source> folder with this script
 
 
 OUTPUTS:
@@ -109,4 +111,4 @@ See files stored in <aaPredictions>
 =========
 =========
 
-06/11/21, qcv
+12/11/21, qcv
